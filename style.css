@@ -1,0 +1,11 @@
+#string-container{
+    background-color: cadetblue;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.list-item{
+    list-style: none;
+    border-bottom: 1px solid black;
+}
