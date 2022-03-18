@@ -25,9 +25,24 @@ const app = new Vue({
 
     methods:{
         
-        addInputValue(){
-            
+        /* funzione che aggiunge il valore dell'input scritto dall'utente nell'array vuoto "inputs" */
+        addInputValue(valueInput){
+            if(valueInput.trim() !== ""){
+                this.inputs.push(valueInput);
+            }
+            else{
+                console.warn("non hai scritto niente di valido");
+            }
+        },
+
+        removeInputValue(valueIndex){
+            this.inputs.splice(valueIndex, 1);
         }
+
+
+
+
+
 
     }
 })
