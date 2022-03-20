@@ -44,8 +44,7 @@
                 <div id="string-container" class="col-12 py-5 px-3 my-5">
 
                     <ul v-if="(inputs.length >= 1)">
-                        <li v-for="(element, index) in inputs" class="p-3 fs-4 list-item d-flex justify-content-between">{{element}} <span> <i @click="removeInputValue(index)" class="fas fa-xmark"></i> </span></li>
-                       
+                        <li v-for="(element, index) in inputs" class="p-3 fs-4 list-item d-flex justify-content-between"> <span> <i @click="addDone(element, index)" class="fa-solid fa-check"></i> {{element}} </span>  <span> <i @click="removeInputValue(index)" class="fas fa-xmark"></i> </span></li>
                     </ul>
 
                     <h2 v-else >Non ci sono elementi</h2>

@@ -21,7 +21,10 @@ const app = new Vue({
 
         inputs:[],
 
-        newContent:""
+        newContent:"",
+
+        done:[],
+        doneItem: true,
     },
 
     methods:{
@@ -30,15 +33,29 @@ const app = new Vue({
         addInputValue(valueInput){
             if(valueInput.trim() !== ""){
                 this.inputs.push(valueInput);
+                /* svuota l'elemento */
+                this.newContent=""
             }
             else{
                 console.warn("non hai scritto niente di valido");
             }
         },
 
+        /* rimuove l'input inserito nell'array dall'array */
         removeInputValue(valueIndex){
             this.inputs.splice(valueIndex, 1);
+        },
+
+        addDone(doneItem, index){
+
+            this.doneItem = false
+            done.push(this.doneItem)
+            if(this.doneItem = false){
+                this.doneItem.classList.toggle("barred")
+            }
         }
+
+        
 
 
 

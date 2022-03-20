@@ -9,3 +9,18 @@
     list-style: none;
     border-bottom: 1px solid black;
 }
+
+i{
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+i:hover{
+    background-color: lightgrey;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.barred{
+    text-decoration: line-through;
+}
