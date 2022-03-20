@@ -34,8 +34,8 @@
 
                     <!-- contenitore degli input con i vari input -->
                     <div class="inputs-wrapper">
-                        <input class="rounded" type="text">
-                        <input class="btn btn-warning ms-4" type="button" value="AGGIUNGI">
+                        <input class="rounded" v-model="inputs" type="text">
+                        <input class="btn btn-warning ms-4" @click="addInputValue(newContent)" type="button" value="AGGIUNGI">
                     </div>
 
                 </div>
@@ -44,9 +44,8 @@
                 <div id="string-container" class="col-12 py-5 px-3 my-5">
 
                     <ul class="">
-                        <li class="p-3 fs-4 list-item d-flex justify-content-between">ciaoooo <span> <i class="fas fa-xmark"></i> </span></li>
-                        <li class="p-3 fs-4 list-item d-flex justify-content-between">ciaoooo <span> <i class="fas fa-xmark"></i> </span></li>
-                        <li class="p-3 fs-4 list-item d-flex justify-content-between">ciaoooo <span> <i class="fas fa-xmark"></i> </span></li>
+                        <li v-for="(element, index) in inputs" class="p-3 fs-4 list-item d-flex justify-content-between">{{element}} <span> <i @click="removeInputValue(index)" class="fas fa-xmark"></i> </span></li>
+                       
                     </ul>
                 </div>
             </div>

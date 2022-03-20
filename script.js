@@ -19,8 +19,9 @@ const app = new Vue({
 
     data:{
 
-        inputs:[]
+        inputs:[],
 
+        newContent:""
     },
 
     methods:{
